@@ -6,7 +6,6 @@
   --c-purple:#9467bd;
   --c-bg:#222;
   --c-text:#f5f5f5;
-  /* smaller headings for a leaner look */
   --fs-h1:clamp(1.4rem,2.5vw + .5rem,1.6rem);
   --fs-h2:clamp(1.1rem,2vw + .3rem,1.3rem);
   --fs-h3:clamp(1rem,1.5vw + .3rem,1.1rem);
