@@ -9,7 +9,17 @@
 *{box-sizing:border-box;margin:0;padding:0}
 .reveal ul, .reveal ol{margin-left:1.2em;}
 .reveal h1, .reveal h2, .reveal p{margin:0 0 0.6em;}
-html,body{height:100%;font-family:"Inter",system-ui,sans-serif;background:var(--bg-900);color:var(--txt-100);}
+html,body{
+  height:100%;
+  font-family:"Inter",system-ui,sans-serif;
+  background:var(--bg-900);
+  color:var(--txt-100);
+  /* Basisgröße für Reveal */
+  font-size:18px;
+}
+.reveal h1{font-size:2em; line-height:1.1;}
+.reveal h2{font-size:1.6em;}
+.reveal section{font-size:1em;}
 .title{text-align:center;font-size:clamp(1.3rem,2vw+1rem,1.8rem);margin:2rem 0 1rem}
 
 /* Upload‑Card */
@@ -28,7 +38,6 @@ html,body{height:100%;font-family:"Inter",system-ui,sans-serif;background:var(--
 #mdUpload{display:none}
 
 
-.reveal section{font-size:0.9em;}
 
 .clr-rot{color:#ff5555}
 .clr-blau{color:#3b82f6}
