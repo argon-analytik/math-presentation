@@ -35,4 +35,15 @@ window.addEventListener('DOMContentLoaded', () => {
   MathJax.typesetPromise().then(()=>Reveal.layout());
   /* Jede Folie neu setzen */
   Reveal.on('slidechanged',()=>MathJax.typesetPromise());
+
+  function initDesmos(){
+    const el=document.getElementById('desmos');
+    if(el){
+      const calc=Desmos.GraphingCalculator(el,{expressions:false});
+      calc.setExpression({id:'line',latex:'y=-2/3x+373.15'});
+    }
+  }
+
+  if(Reveal.isReady()) initDesmos();
+  else Reveal.on('ready', initDesmos);
 });
