@@ -1,78 +1,64 @@
-/* ===== Einheitliches Dark‑Design (Upload‑Seite + Präsentation) – Feintuning ===== */
+/* ========== Dark-Design + Feste Typografie (final) ========== */
 :root{
-  /* GitHub‑Dark Farbskala + Blau‑Akzent */
-  --bg-900:#0e1117;
-  --bg-800:#161b22;
-  --bg-700:#1f242c;
-  --accent:#3b82f6;
-  --accent-light:#60a5fa;
-  --txt-100:#f3f4f6;
-  --txt-300:#d1d5db;
+  /* Farbpalette wie Upload-Startseite */
+  --bg-900:#0e1117; --bg-800:#161b22; --bg-700:#1f242c;
+  --accent:#3b82f6; --txt-100:#f3f4f6; --txt-300:#d1d5db;
 
-  /* ---------- Responsive Font‑Scale ----------
-     Ziel‑Verhältnis ≈ 1 : 1.6 → Heading max 30 px, Body max 19 px  */
-  --fs-heading:clamp(1.3rem,1.1vw+0.9rem,1.9rem); /* 21 – 30 px  */
-  --fs-body:   clamp(1.05rem,0.8vw+0.5rem,1.2rem); /* 17 – 19 px  */
-  --fs-table:  clamp(0.9rem,0.6vw+0.3rem,1.05rem); /* 14 – 17 px  */
+  /* ---------- Feste Schriftgrößen  ---------- */
+  --fs-heading:1.55rem;   /* ≈ 24 px   */
+  --fs-body:1.05rem;      /* ≈ 16.5 px */
+  --fs-small:0.95rem;     /* ≈ 15 px   */
 }
 
-/* ---------- Grundlayout ---------- */
-html{scroll-behavior:smooth;}
 body{
   margin:0;
-  font-family:"Inter",system-ui,sans-serif;
+  font-family:"Inter","Helvetica Neue",Arial,sans-serif;
   background:var(--bg-900);
   color:var(--txt-100);
 }
 
-/* Schmalere Slide‑Fläche für bessere Lesbarkeit */
-.reveal .slides{max-width:70rem;}
+/* =================  LAYOUT  ================= */
+.reveal .slides{ max-width:70rem; }      /* ~1120 px */
 
-/* ---------- Überschriften ---------- */
+/* =================  TYPO  =================== */
 .reveal h1,
 .reveal h2{
-  font-size:var(--fs-heading) !important; /* überschreibt Reveal‑Theme */
+  font-size:var(--fs-heading) !important;  /* hart gedeckelt */
   line-height:1.25;
-  margin:0 0 0.9rem;
+  margin:0 0 0.9em;
+  font-weight:600;
+  text-align:center;
+}
+
+.reveal h3{
+  font-size:1.25rem;          /* ≈ 20 px */
+  margin:0 0 0.7em;
   font-weight:600;
 }
 
-/* ---------- Fließtext & Listen ---------- */
-p,li{
+.reveal p,
+.reveal li{
   font-size:var(--fs-body);
-  line-height:1.65;
-  margin-bottom:.55em;
+  line-height:1.6;
+  margin-bottom:.45em;
 }
-ul{padding-left:1.4em;}
 
-/* ---------- Tabellen ---------- */
+/* Listen schöner einrücken */
+.reveal ul{ padding-left:1.3em; }
+
+/* Tabellen kompakt & lesbar */
 table{
   border-collapse:collapse;
-  width:58rem;
-  max-width:100%;
-  margin:1rem 0;
+  width:60rem; max-width:100%;
 }
 th,td{
-  font-size:var(--fs-table);
-  padding:.45em .7em;
+  font-size:var(--fs-small);
+  padding:.4em .6em;
   border:1px solid var(--bg-700);
 }
-th{
-  background:var(--bg-800);
-  font-weight:600;
-}
+th{ background:var(--bg-800); }
 
-/* ---------- Desmos‑/Graph‑Container ---------- */
-.desmos-graph{
-  width:100%;
-  height:420px;
-  margin:1.3em 0;
-  border:1px solid var(--bg-700);
-  border-radius:12px;
-  box-shadow:0 0 0 1px var(--bg-800),0 10px 20px rgba(0,0,0,.35);
-}
-
-/* ---------- Farbliche Helfer ---------- */
-.rot  {color:#ef4444;}
-.blau {color:var(--accent);}
-.gruen{color:#22c55e;}
+/* Farbliche Helfer */
+.rot{color:#ef4444;}  /* Tailwind-Rot-500 */
+.blau{color:var(--accent);}
+.gruen{color:#10b981;} /* Tailwind-Grün-500 */
