@@ -3,6 +3,9 @@ const slides = document.querySelectorAll('.slide');
 const progress = document.getElementById('progress');
 const menu = document.getElementById('menu');
 const menuToggle = document.getElementById('menuToggle');
+const prevSlideBtn = document.getElementById('prevSlideBtn');
+const nextFragmentBtn = document.getElementById('nextFragmentBtn');
+const nextSlideBtn = document.getElementById('nextSlideBtn');
 const showSlide = (index) => {
     if (index < 0 || index >= slides.length) return;
     slides[currentSlide].classList.remove('active');
@@ -29,16 +32,21 @@ const prevSlide = () => {
     showSlide(currentSlide - 1);
 };
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight' || e.key === ' ') {
+    if (document.activeElement !== document.body) return;
+    if (e.key === ' ') {
         nextFragmentOrSlide();
+    } else if (e.key === 'ArrowRight') {
+        showSlide(currentSlide + 1);
     } else if (e.key === 'ArrowLeft') {
         prevSlide();
     } else if (e.key.toLowerCase() === 'm') {
         toggleMenu();
     }
 });
-document.addEventListener('click', nextFragmentOrSlide);
 menuToggle.addEventListener('click', toggleMenu);
+if (prevSlideBtn) prevSlideBtn.addEventListener('click', prevSlide);
+if (nextFragmentBtn) nextFragmentBtn.addEventListener('click', nextFragmentOrSlide);
+if (nextSlideBtn) nextSlideBtn.addEventListener('click', () => showSlide(currentSlide + 1));
 menu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', (e) => {
         e.preventDefault();
