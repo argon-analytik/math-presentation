@@ -74,8 +74,8 @@ body {
 .slide.active {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     text-align: left;
     opacity: 1;
 }
