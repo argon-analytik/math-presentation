@@ -3,22 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>.md \u2192 Interaktive Pr\u00e4sentation</title>
+  <title>Mathematik-Folien</title>
 
-  <!-- ----- Dark\u2011Theme + Widget\u2011Grundstyles ----- -->
+  <!-- Reveal Grund-CSS  -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css" id="theme">
+
+  <!-- Eigenes Dark-Theme (identisch zur Upload-Seite) -->
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Polyfills & MathJax -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script async id="MathJax-script"
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
-  <h1 class="title">Markdown\u2011Datei hochladen</h1>
+<div class="reveal"><div class="slides">
 
-  <!-- Drag\u2011&\u2011Drop / File\u2011Picker -->
-  <label id="dropZone">
-    <input type="file" id="mdUpload" accept=".md">
-    <!-- Heroicons: “Cloud Upload” -->
-    <svg width="72" height="72" viewBox="0 0 24 24"><path d="M12 16l4-5h-3V4h-2v7H8l4 5z"/><path d="M20 18H4v-2h16v2z"/></svg>
-    <p><strong>Datei hierher ziehen</strong><br>oder klicken \u2026</p>
-  </label>
+<!-- ====================================================== -->
+<section>
+  <h2>Klammern: jeden Term mit jedem anderen multiplizieren</h2>
+  <ul>
+    <li class="fragment">Bei mehreren Faktoren: jeden genau einmal verwenden, die Reihenfolge spielt keine Rolle</li>
+    <li class="fragment math">\(3x\,(2x+5y^{2}) = 6x^{2} + 15xy^{2}\)</li>
+    <li class="fragment math">\((-7xz^{3}+3xy^{2})\cdot(-2xz) = 14x^{2}z^{4}-6x^{2}y^{2}z\)</li>
+    <li class="fragment math">\((3x-7y)(2x+5y) = 6x^{2}+xy-35y^{2}\)</li>
+    <li class="fragment math">\(2(x+3)(x+7) = 2x^{2}+20x+42\)</li>
+    <li class="fragment math">\(3x^{2}(x-3)(9x-1) = 27x^{4}-84x^{3}+9x^{2}\)</li>
+  </ul>
+</section>
 
-  <script defer src="assets/js/uploader.js"></script>
+<section>
+  <h2>Binomische Formeln – Abkürzung für häufige Produkte</h2>
+  <ul>
+    <li class="fragment math">\((a+b)^{2}=a^{2}+2ab+b^{2}\)</li>
+    <li class="fragment math">\((a-b)^{2}=a^{2}-2ab+b^{2}\)</li>
+    <li class="fragment math">\((a+b)(a-b)=a^{2}-b^{2}\)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Schnelles Ausmultiplizieren mittels Binomen</h2>
+  <ul>
+    <li class="fragment math">\((u-10)(u+10)=u^{2}-100\)</li>
+    <li class="fragment math">\((x+3y)^{2}=x^{2}+6xy+9y^{2}\)</li>
+    <li class="fragment math">\((5x-4z)^{2}=25x^{2}-40xz+16z^{2}\)</li>
+    <li class="fragment math">\((x^{2}y+1)(x^{2}y-1)=x^{4}y^{2}-1\)</li>
+    <li class="fragment math">\((2x-w^{10})^{2}=4x^{2}-4xw^{10}+w^{20}\)</li>
+    <li class="fragment math">\((w+\tfrac{4}{3})^{2}=w^{2}+\tfrac{8}{3}w+\tfrac{16}{9}\)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Faktorisieren – Zweiklammer-Ansatz</h2>
+  <p class="fragment">Beispiel: \(x^{2}+1x-6\) → \((x-2)(x+3)\)</p>
+  <ol>
+    <li class="fragment">Faktor \(x\) aus \(x^{2}\) → erste Glieder</li>
+    <li class="fragment">Zerlege \(-6\) in Paare, teste bis Mittelterm passt</li>
+    <li class="fragment">Faktorisiert: \((x-2)(x+3)\)</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Einsetzverfahren (Gleichungssystem)</h2>
+  <p>\(\begin{cases}2y = 7 + x\\-3x+8 = y+1\end{cases}\)</p>
+  <ol>
+    <li class="fragment">Löse (II) nach \(x\) → \(x=\tfrac{y}{-3}+\tfrac{7}{3}\)</li>
+    <li class="fragment">Setze in (I) ein → \(y=4\)</li>
+    <li class="fragment">Ergebnis: \(x=1\), Lösung \(L=\{(1,4)\}\)</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Wurzelgleichungen quadrieren</h2>
+  <p class="fragment math">\((5\sqrt{x-2}-6)^{2}=25(x-2)-60\sqrt{x-2}+36\)</p>
+</section>
+
+<section>
+  <h2>Wurzelgleichungen – vollständige Lösung</h2>
+  <ol>
+    <li class="fragment">Ausgang: \(2\sqrt{-2x+2}+3=3x\)</li>
+    <li class="fragment">Quadrieren → \(9x^{2}-10x+1=0\)</li>
+    <li class="fragment">Lösungen: \(x_{1}=1,\;x_{2}=\tfrac19\) (Probe → nur \(x=1\))</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Lineare Funktionen – Delisle ↔ Kelvin</h2>
+  <ul>
+    <li class="fragment">Stützpunkte: \((150,273{,}15)\) & \((0,373{,}15)\)</li>
+    <li class="fragment">Steigung: \(m=-\tfrac23\)</li>
+    <li class="fragment">Gerade: \(y=-\tfrac23x+373{,}15\)</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Interaktives Diagramm</h2>
+  <div id="desmos" class="desmos-graph"></div>
+</section>
+
+<section>
+  <h2>Zusammenfassung</h2>
+  <table>
+    <thead><tr><th>Thema</th><th>Konzept</th></tr></thead>
+    <tbody>
+      <tr><td>Klammern</td><td>Distributivgesetz</td></tr>
+      <tr><td>Binomische Formeln</td><td>Spezial-Produkte</td></tr>
+      <tr><td>Faktorisieren</td><td>Zweiklammer-Ansatz</td></tr>
+      <tr><td>Einsetzverfahren</td><td>Lineare Gleichungen</td></tr>
+      <tr><td>Wurzelgleichungen</td><td>Radikale eliminieren</td></tr>
+      <tr><td>Lineare Funktionen</td><td>Gerade durch 2 Punkte</td></tr>
+    </tbody>
+  </table>
+</section>
+<!-- ====================================================== -->
+
+</div></div><!-- reveal / slides -->
+
+<!-- Reveal- & Desmos-JS -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+<script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+<script src="assets/js/script.js"></script>
+
+<script>
+  /*  >>>  Reveal Setup  — kein Auto-Scaling mehr  <<<  */
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    width: 1280,
+    height: 720,
+    margin: 0.05,
+    minScale: 1,
+    maxScale: 1
+  });
+</script>
 </body>
 </html>
