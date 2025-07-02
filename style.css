@@ -1,0 +1,17 @@
+body {
+  background: #111;
+  color: #eee;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  color: #8bc34a;
+}
+.reveal .fragment {
+  transition: opacity 0.5s ease;
+}
+/* highlight numbers */
+.reveal .hl-num {
+  color: #ff9800;
+}
