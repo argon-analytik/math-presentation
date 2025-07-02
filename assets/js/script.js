@@ -57,7 +57,6 @@ function updateProgress() {
 function toggleMenu() {
     menu.classList.toggle('visible');
 }
-
 // Desmos graph
 window.addEventListener('load', () => {
     const el = document.getElementById('desmos');
