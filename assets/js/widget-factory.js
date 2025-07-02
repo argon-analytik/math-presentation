@@ -12,10 +12,16 @@ document.addEventListener('slides-ready', ()=>{
     const range = Object.assign(document.createElement('input'),{
       type:'range', min:el.dataset.min||0, max:el.dataset.max||10, value:el.dataset.init||0
     });
-    range.oninput = ()=>{ const x=+range.value;
-      document.getElementById(out).innerHTML = Function('x',`return ${el.dataset.fn}`)(x);
-      MathJax.typesetPromise();
-    };
+      range.oninput = ()=>{ const x=+range.value;
+        const target = document.getElementById(out) || (function(){
+          const d=document.createElement('div');
+          d.id=out;
+          el.parentNode.insertBefore(d, el.nextSibling);
+          return d;
+        })();
+        target.innerHTML = Function('x', 'return '+ el.dataset.fn)(x);
+        MathJax.typesetPromise();
+      };
     el.replaceWith(range);
   }
 

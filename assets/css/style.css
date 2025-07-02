@@ -7,6 +7,8 @@
 
 /* Grundlayout (gilt f\u00fcr beide Seiten) */
 *{box-sizing:border-box;margin:0;padding:0}
+.reveal ul, .reveal ol{margin-left:1.2em;}
+.reveal h1, .reveal h2, .reveal p{margin:0 0 0.6em;}
 html,body{height:100%;font-family:"Inter",system-ui,sans-serif;background:var(--bg-900);color:var(--txt-100);}
 .title{text-align:center;font-size:clamp(1.3rem,2vw+1rem,1.8rem);margin:2rem 0 1rem}
 
@@ -31,4 +33,6 @@ button{padding:.4em .8em;border:none;border-radius:4px;cursor:pointer;
        background:var(--accent);color:#fff;font-size:.9rem}
 button:hover{background:var(--accent-light);}
 .hidden{display:none}.visible{display:block}
+
+.reveal section{font-size:0.9em;}
 
