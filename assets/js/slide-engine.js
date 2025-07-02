@@ -1,6 +1,13 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const md = sessionStorage.getItem('mdSource');
-  if(!md){ alert('Kein Markdown im Speicher – bitte zuerst Datei hochladen.'); return; }
+  let md = sessionStorage.getItem('mdSource');
+  if(!md){
+    alert('Kein Markdown im Speicher – bitte zuerst Datei hochladen.');
+    return;
+  }
+
+  /* Meta-Block am Anfang entfernen */
+  const meta=/^<!--\s*meta\s*-->[\s\S]*?^---\s*$/m;
+  if(meta.test(md)) md=md.replace(meta,'');
 
   const host = document.querySelector('.reveal .slides');
   md.split(/^---$/m).forEach(chunk=>{
