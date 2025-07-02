@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Mathematik Folien</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<div id="progress"></div>
+<div id="menuToggle">&#9776;</div>
+<nav id="menu">
+    <ul>
+        <li><a href="#" data-slide="0">Klammern</a></li>
+        <li><a href="#" data-slide="1">Binomische Formeln</a></li>
+        <li><a href="#" data-slide="2">Anwendung Binome</a></li>
+        <li><a href="#" data-slide="3">Faktorisieren</a></li>
+        <li><a href="#" data-slide="4">Einsetzverfahren</a></li>
+        <li><a href="#" data-slide="5">Wurzel quadrieren</a></li>
+        <li><a href="#" data-slide="6">Wurzelgleichungen</a></li>
+        <li><a href="#" data-slide="7">Lineare Funktionen</a></li>
+        <li><a href="#" data-slide="8">Diagramm</a></li>
+        <li><a href="#" data-slide="9">Zusammenfassung</a></li>
+    </ul>
+</nav>
+<div id="slides">
+    <!-- Slide 1 -->
+    <section class="slide" id="slide1">
+        <h1>Klammern: jeden Term mit jedem anderen multiplizieren</h1>
+        <ul class="step-list">
+            <li class="fragment">Bei mehreren Faktoren: jeden genau einmal verwenden, die Reihenfolge spielt keine Rolle</li>
+            <li class="fragment math">\(3x\,(2x+5y^{2}) = 6x^{2} + 15xy^{2}\)</li>
+            <li class="fragment math">\((-7xz^{3}+3xy^{2})\cdot(-2xz) = 14x^{2}z^{4}-6x^{2}y^{2}z\)</li>
+            <li class="fragment math">\((3x-7y)(2x+5y) = 6x^{2}+15xy-14xy-35y^{2}=6x^{2}+xy-35y^{2}\)</li>
+            <li class="fragment math">\(2(x+3)(x+7) = (2x+6)(x+7)=(x+3)(2x+14)=2x^{2}+14x+6x+42 = 2x^{2}+20x+42\)</li>
+            <li class="fragment math">\(3x^{2}(x-3)(9x-1)= (3x^{3}-9x^{2})(9x-1)=27x^{4}-3x^{3}-81x^{3}+9x^{2}=27x^{4}-84x^{3}+9x^{2}\)</li>
+        </ul>
+    </section>
+    <!-- Slide 2 -->
+    <section class="slide" id="slide2">
+        <h1>Binomische Formeln: Abkürzung für häufige Produkte</h1>
+        <ul class="step-list">
+            <li class="fragment math">\((a+b)^{2}=a^{2}+2ab+b^{2}\)</li>
+            <li class="fragment math">\((a-b)^{2}=a^{2}-2ab+b^{2}\)</li>
+            <li class="fragment math">\((a+b)(a-b)=a^{2}-b^{2}\)</li>
+        </ul>
+    </section>
+    <!-- Slide 3 -->
+    <section class="slide" id="slide3">
+        <h1>Schnelles Ausmultiplizieren mittels Binomen</h1>
+        <ul class="step-list">
+            <li class="fragment math">\((u-10)(u+10)=u^{2}-100\)</li>
+            <li class="fragment math">\((x+3y)^{2}=x^{2}+6xy+9y^{2}\)</li>
+            <li class="fragment math">\((5x-4z)^{2}=25x^{2}-40xz+16z^{2}\)</li>
+            <li class="fragment math">\((x^{2}y+1)(x^{2}y-1)=x^{4}y^{2}-1\)</li>
+            <li class="fragment math">\((2x-w^{10})^{2}=4x^{2}-4xw^{10}+w^{20}\)</li>
+            <li class="fragment math">\((w+\tfrac{4}{3})^{2}=w^{2}+\tfrac{8}{3}w+\tfrac{16}{9}\)</li>
+        </ul>
+    </section>
+    <!-- Slide 4 -->
+    <section class="slide" id="slide4">
+        <h1>Faktorisieren: Zweiklammer-Ansatz mit Vorzeichen</h1>
+        <p class="fragment">Beispiel: \(x^{2}+1x-6\) → \((x-2)(x+3)\)</p>
+        <ol class="step-list">
+            <li class="fragment">Faktor \(x\) aus \(x^{2}\) → erste Glieder</li>
+            <li class="fragment">Zerlege \(-6\) in Paare: \(2\cdot(-3)\), \((-2)\cdot 3\), \(1\cdot(-6)\), \((-1)\cdot 6\)</li>
+            <li class="fragment">Teste Paare bis Mittelterm passt: \((x-2)(x+3)\)</li>
+        </ol>
+    </section>
+    <!-- Slide 5 -->
+    <section class="slide" id="slide5">
+        <h1>Einsetzverfahren (Gleichungssystem)</h1>
+        <p>\(\begin{cases}2y = 7 + x\\-3x+8 = y+1\end{cases}\)</p>
+        <ol class="step-list">
+            <li class="fragment">Löse (II) nach \(x\) auf: \(x=\frac{y}{-3}+\frac{7}{3}\)</li>
+            <li class="fragment">Setze in (I) ein → \(y=4\)</li>
+            <li class="fragment">Zurück einsetzen → \(x=1\)</li>
+            <li class="fragment">Lösung: \(L=\{(1,4)\}\)</li>
+        </ol>
+    </section>
+    <!-- Slide 6 -->
+    <section class="slide" id="slide6">
+        <h1>Wurzelgleichungen quadrieren</h1>
+        <p class="fragment">Beispiel: \((5\sqrt{x-2}-6)^{2}\)</p>
+        <p class="fragment math">\(=25(x-2)-60\sqrt{x-2}+36\)</p>
+    </section>
+    <!-- Slide 7 -->
+    <section class="slide" id="slide7">
+        <h1>Wurzelgleichungen: vollständige Lösung</h1>
+        <ol class="step-list">
+            <li class="fragment">Gegeben: \(2\sqrt{-2x+2}+3=3x\), \(D=\{x\in\mathbb R\mid x\le1\}\)</li>
+            <li class="fragment">Umstellen → \(2\sqrt{-2x+2}=3x-3\)</li>
+            <li class="fragment">Quadrieren → \(4(-2x+2)=9x^{2}-18x+9\)</li>
+            <li class="fragment">Löse → \(9x^{2}-10x+1=0\)</li>
+            <li class="fragment">Diskriminante: \(D=64\)</li>
+            <li class="fragment">Mitternachtsformel → \(x_{1}=1,\;x_{2}=\frac{1}{9}\)</li>
+            <li class="fragment">Probe: nur \(x=1\) gültig</li>
+            <li class="fragment">Lösung: \(L=\{1\}\)</li>
+        </ol>
+    </section>
+    <!-- Slide 8 -->
+    <section class="slide" id="slide8">
+        <h1>Lineare Funktionen: Delisle ↔ Kelvin</h1>
+        <ul class="step-list">
+            <li class="fragment">Stützpunkte: \((150\,^{\circ}\!D, 273{,}15\,\text{K})\) und \((0\,^{\circ}\!D,373{,}15\,\text{K})\)</li>
+            <li class="fragment">Steigung: \(m=-\tfrac{2}{3}\)</li>
+            <li class="fragment">Geradengleichung: \(y=-\tfrac{2}{3}x+373{,}15\)</li>
+        </ul>
+    </section>
+    <!-- Slide 9 -->
+    <section class="slide" id="slide9">
+        <h1>Interaktives Diagramm</h1>
+        <div id="desmos" style="width: 100%; height: 400px;"></div>
+    </section>
+    <!-- Slide 10 -->
+    <section class="slide" id="slide10">
+        <h1>Zusammenfassung</h1>
+        <table>
+            <thead>
+            <tr><th>Thema</th><th>Zentrales Konzept</th></tr>
+            </thead>
+            <tbody>
+            <tr><td>Klammern ausmultiplizieren</td><td>Distributivgesetz</td></tr>
+            <tr><td>Binomische Formeln</td><td>Spezialfälle des Produkts</td></tr>
+            <tr><td>Faktorisieren</td><td>Zweiklammer-Ansatz</td></tr>
+            <tr><td>Einsetzverfahren</td><td>Lineare Gleichungen</td></tr>
+            <tr><td>Wurzelgleichungen</td><td>Radikale eliminieren</td></tr>
+            <tr><td>Lineare Funktionen</td><td>Gerade durch zwei Punkte</td></tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+<script src="https://www.desmos.com/api/v1.6/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
